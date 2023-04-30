@@ -12,9 +12,9 @@ class Config:
         criterion = None
         optimizer = None
         storage = Storage('path/to/storage')
-        logger = Logger('./checkpoints/simple', project_name='simple')
-        train_dataloader = DataLoader(SimpleDataset('local/train'))
-        val_dataloader = DataLoader(SimpleDataset('local/val'))
+        logger = Logger('./checkpoints/simple', project_name='df-text')
+        train_dataloader = DataLoader(SimpleDataset('F://cropped/train'))
+        val_dataloader = DataLoader(SimpleDataset('F://cropped/val'))
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         max_epoch = 20
 

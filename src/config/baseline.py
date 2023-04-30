@@ -20,8 +20,8 @@ class Config:
         device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
         info_logger.info(f'Using device: {device}')
 
-        style_dir = Path('data/IMGUR5K')
-        download_dataset('IMGUR5K')
+        style_dir = Path('F:\\cropped')
+        # download_dataset('IMGUR5K')
         batch_size = 4
         train_dataloader = DataLoader(BaselineDataset(style_dir / 'train'), shuffle=True, batch_size=batch_size)
         val_dataloader = DataLoader(BaselineDataset(style_dir / 'val'), batch_size=batch_size)

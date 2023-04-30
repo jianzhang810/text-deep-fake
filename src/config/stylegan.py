@@ -22,7 +22,7 @@ class Config:
 
         device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
         info_logger.info(f'Using device: {device}')
-        style_dir = Path('data/IMGUR5K')
+        style_dir = Path('F:\\cropped')
         if not disk.get_disabled():
             download_dataset('IMGUR5K')
         else:

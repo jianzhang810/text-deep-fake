@@ -23,7 +23,7 @@ class Config:
 
         device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
         info_logger.info(f'Using device: {device}')
-        style_dir = Path('data/IMGUR5K')
+        style_dir = Path('F:\\df-text/test')
 
         if not disk.get_disabled():
             download_dataset('IMGUR5K')
@@ -42,7 +42,7 @@ class Config:
         weights_folder = f'models/{weights_folder_name}'
         if not Path(weights_folder).exists():
             if not disk.get_disabled():
-                disk.download(weights_folder, weights_folder)
+                disk.download(weights_folder, weights_folder, 'F://df-text')
             else:
                 logger.error(f'You need to download the {weights_folder_name} folder from '
                              'https://disk.yandex.ru/d/gTJa6Bg2QW0GJQ and '
@@ -89,7 +89,7 @@ class Config:
         adv_coef = 0.06
 
         checkpoint_folder = 'stylegan(pretrained_on_content)_typeface_ocr_adv_192x64'
-        storage = Storage(f'checkpoints/{checkpoint_folder}')
+        storage = Storage(f'//jianzhang-nas/jian_server/win_data/checkpoints/{checkpoint_folder}')
 
         logger = Logger(
             image_freq=100,
